@@ -10,13 +10,15 @@
   "author": "Matthew Kats",
   "license": "ISC",
   "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "axios": "^0.19.0",
+    "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
-    "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
     "babel-loader": "^8.0.6",
     "html-webpack-plugin": "^3.2.0",
@@ -24,5 +26,13 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mattkvls/nasa_Ajax_Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mattkvls/nasa_Ajax_Project/issues"
+  },
+  "homepage": "https://github.com/Mattkvls/nasa_Ajax_Project#readme",
   "description": ""
 }
