@@ -1,4 +1,5 @@
 import Picture from './models/PictureOfDay';
+import Asteroids from './models/Asteroids';
 import * as pictureView from './views/pictureOfDayView';
 import 'bootstrap';
 /*Global state of the app 
@@ -24,3 +25,8 @@ const  controlPicture=async ()=>{
 controlPicture();
 
 
+const controlAsteroids=async ()=>{
+    state.asteroids=new Asteroids();
+    await state.asteroids.getAsteroids();
+}
+controlAsteroids();
