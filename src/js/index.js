@@ -1,5 +1,6 @@
 import Picture from './models/PictureOfDay';
-
+import * as pictureView from './views/pictureOfDayView';
+import 'bootstrap';
 /*Global state of the app 
 *-picture object
 *-asteroids object
@@ -17,7 +18,8 @@ const  controlPicture=async ()=>{
     
 
     //render the image of the day at the UI
-    console.log(state.picture.result);
+    pictureView.renderImage(state.picture.result);
+    
 }
 controlPicture();
 
