@@ -1,6 +1,7 @@
 import Picture from './models/PictureOfDay';
 import Asteroids from './models/Asteroids';
 import * as pictureView from './views/pictureOfDayView';
+import * as asteroidView from './views/asteroidsView';
 import 'bootstrap';
 /*Global state of the app 
 *-picture object
@@ -25,8 +26,23 @@ const  controlPicture=async ()=>{
 controlPicture();
 
 
+
+
 const controlAsteroids=async ()=>{
-    state.asteroids=new Asteroids();
-    await state.asteroids.getAsteroids();
+    //create the asteroids object in  the state
+    state.asteroidsNear=new Asteroids();
+
+    //get the data and save  them to the state  as asteroids
+    await state.asteroidsNear.getAsteroids();
+
+    //display the  data to the ui
+    const day=new Date().getDate();
+    const month=new Date().getMonth();
+    const year=new Date().getFullYear();  
+    const startDay=`${year}-${month}-${day}`;
+
+    const todayArr=state.asteroidsNear.asteroids[startDay];
+
+    asteroidView.renderAsteroids(todayArr);
 }
 controlAsteroids();

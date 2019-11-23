@@ -17,11 +17,12 @@ export default class Asteroids{
         
         const startDay=`${year}-${month}-${day}`;
         
-        const endDay=`${year}-${month}-${day+7}`;
+        const endDay=`${year}-${month}-${day+1}`;
        
-        const asteroids= await axios(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDay}&end_date=${endDay}&api_key=CbSMLxCRncwtSTBVz87TluM0lnbX9Sd9tQY3ja5U`);
-        console.log(asteroids);
-        
+        const aster= await axios(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDay}&end_date=${endDay}&api_key=CbSMLxCRncwtSTBVz87TluM0lnbX9Sd9tQY3ja5U`);
+       
+        this.asteroids=aster.data.near_earth_objects;
+
         }catch(error){
             alert(error);
         }
