@@ -1,8 +1,12 @@
 import Picture from './models/PictureOfDay';
 import Asteroids from './models/Asteroids';
+import MarsWeather from './models/MarsWeather';
 import * as pictureView from './views/pictureOfDayView';
 import * as asteroidView from './views/asteroidsView';
+
 import 'bootstrap';
+
+
 /*Global state of the app 
 *-picture object
 *-asteroids object
@@ -46,3 +50,12 @@ const controlAsteroids=async ()=>{
     asteroidView.renderAsteroids(todayArr);
 }
 controlAsteroids();
+
+
+const controlMarsWeather= async()=>{
+    //create the marsWeather object
+    state.marsWeather=new MarsWeather();
+    await state.marsWeather.getMarsWeather();
+    console.log(state);
+}
+controlMarsWeather();
