@@ -24,7 +24,7 @@ export default class Asteroids{
         this.asteroids=aster.data.near_earth_objects;
 
         }catch(error){
-            alert(error);
+            console.log(error);
         }
     }
 }

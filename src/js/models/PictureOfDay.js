@@ -16,7 +16,7 @@ export default class Picture{
         // console.log(res.data);
 
         }catch(error){
-            alert(error);
+            console.log(error);
         }     
     }
 }

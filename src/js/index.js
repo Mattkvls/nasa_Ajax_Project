@@ -3,6 +3,7 @@ import Asteroids from './models/Asteroids';
 import MarsWeather from './models/MarsWeather';
 import * as pictureView from './views/pictureOfDayView';
 import * as asteroidView from './views/asteroidsView';
+import * as mWeather from './views/marsWeatherView';
 
 import 'bootstrap';
 
@@ -56,6 +57,14 @@ const controlMarsWeather= async()=>{
     //create the marsWeather object
     state.marsWeather=new MarsWeather();
     await state.marsWeather.getMarsWeather();
-    console.log(state);
+
+    // console.log(typeof(state.marsWeather.marsWeatData));
+    // console.log(state.marsWeather.marsWeatData.data);
+
+    //save the object to a variable 
+    const obj=state.marsWeather.marsWeatData.data;
+
+    //render the weather
+    mWeather.renderMarsWeather(obj);
 }
 controlMarsWeather();
