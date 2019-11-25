@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* set the font to the body for inhetitance reasons, the line-height is 1.7 bigger than the default */
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: white;
+}
+
+/* add a white frame to entire body  */
+body{
+    padding: 30px;
+}
+
+
+/* we have to background images one gradient and one from the files  */
+.header{
+    height: 95vh;
+    background-image: linear-gradient(
+        to left, 
+        rgba(224, 224, 224, 0.1),
+        rgba(0, 0, 0, 0.6)),
+        url('./img/nasa-OLlj17tUZnU-unsplash.jpg');
+    background-size: cover;
+    background-position:top;
+    position: relative;
+    /* clip-path: polygon(0 40vh, 100% 0, 100% 100%, 0 100%); */
+    /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
+}
+
+/* easiest way to center anything with transform top left properties*/
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+
+}
+
+.logo{
+    height: 100px;
+    /* the width is set automatically */
+    display: block;
+    margin: 0 auto;
+}
+
+.space{
+    color: rgb(236,50,36)
+}
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;/*in relation to the parent element*/
+    transform: translate(-50%,-50%);/*will make the box shift to the center in relation to itself*/
+    
+    /* use the absolute positioning to center it and remain in the center  */
+
+    /* to center the button  */
+    text-align: center;
+}
+
+* styling the h1 title in different parts */
+.heading-primary{
+    color: #ffffff;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    /* το καναμε γιατι στο κουνιμα των heading πηγαινε λιγο προς τα πανω κανεις δεν ξερει γιατι το κανει στο animation αυτο αλλα ετσι το φτιαχνουμε */
+
+    
+    /* δινει αποσταση απο το κουμπι και το h1 */
+    margin-bottom: 60px;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 20px;
+
+    /* properties for the animation  */
+    animation-name: moveInLeft;
+    animation-duration: 1.2s;
+
+/* animation properties generally to use  */
+    /* animation-delay: 1s;
+    animation-iteration-count: 3; θα κανει το animation να συμβει 3 φορες */
+    animation-timing-function: ease-out;
+    /*we have different kind of timing functions check mdn*/
+}
+
+.heading-primary-sec{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+  /* properties for the animation  */
+    animation: moveInright 1.2s ease-out;
+    
+}
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform:translate(0); 
+        
+        /* it will look like before the animation  */
+    }
+}
+
+@keyframes moveInright{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80%{
+
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform:translate(0); 
+        
+        /* it will look like before the animation  */
+    }
+}
+
