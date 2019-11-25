@@ -1,3 +1,4 @@
+import '../styles/app.css';
 import Picture from './models/PictureOfDay';
 import Asteroids from './models/Asteroids';
 import MarsWeather from './models/MarsWeather';

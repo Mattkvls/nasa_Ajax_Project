@@ -26,7 +26,7 @@ body{
         to left, 
         rgba(224, 224, 224, 0.1),
         rgba(0, 0, 0, 0.6)),
-        url('./img/nasa-OLlj17tUZnU-unsplash.jpg');
+        url('../../dist/img/nasa-OLlj17tUZnU-unsplash.jpg');
     background-size: cover;
     background-position:top;
     position: relative;
