@@ -2,11 +2,14 @@ import '../styles/app.css';
 import Picture from './models/PictureOfDay';
 import Asteroids from './models/Asteroids';
 import MarsWeather from './models/MarsWeather';
+import Search from './models/SearchNasaLi';
 import * as pictureView from './views/pictureOfDayView';
 import * as asteroidView from './views/asteroidsView';
 import * as mWeather from './views/marsWeatherView';
 
 import 'bootstrap';
+
+
 
 
 /*Global state of the app 
@@ -40,16 +43,14 @@ const controlAsteroids=async ()=>{
 
     //get the data and save  them to the state  as asteroids
     await state.asteroidsNear.getAsteroids();
-
+    
     //display the  data to the ui
-    const day=new Date().getDate();
-    const month=new Date().getMonth();
-    const year=new Date().getFullYear();  
-    const startDay=`${year}-${month}-${day}`;
+    //convert the object to array /*the state.asteroidsNear.asteroids is an object which has two arrays today, tomorrow's */
+    const asteroidsArray=Object.keys(state.asteroidsNear.asteroids).map(function(key){return state.asteroidsNear.asteroids[key]});
+    // console.log(asteroidsArray[0]);
 
-    const todayArr=state.asteroidsNear.asteroids[startDay];
-
-    asteroidView.renderAsteroids(todayArr);
+    //render the today's array
+    asteroidView.renderAsteroids(asteroidsArray[0]);
 }
 controlAsteroids();
 
@@ -69,3 +70,33 @@ const controlMarsWeather= async()=>{
     mWeather.renderMarsWeather(obj);
 }
 controlMarsWeather();
+
+
+
+
+
+const controlSearchLi= async()=>{
+    //create the new search object 
+    state.searchObject=new Search('apolo');
+
+    //get the data 
+    await state.searchObject.getResults();
+
+    //render the results to ui 
+    
+
+    //clean the search box for the next search 
+
+
+
+
+
+/*
+    * get the input from ui 
+    * get the data for the query from the nasa api 
+    * display the data to ui 
+    * clean the form for the next search 
+    * clean the ui when event click at the search box 
+    * */
+}
+controlSearchLi();

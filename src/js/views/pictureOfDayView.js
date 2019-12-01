@@ -6,7 +6,9 @@ import {elements} from './base';
 export const renderImage=(imageObj)=>{
     const markup=`
     <div>
+        <figure>
         <img src="${imageObj.hdurl}" alt="picture of the day"
+        </figure>
         <h4> ${imageObj.title}</h4>
         <p>${imageObj.explanation}</p>
         <p>copyright:${imageObj.copyright}</p>

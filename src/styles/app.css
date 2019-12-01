@@ -47,6 +47,7 @@ body{
     /* the width is set automatically */
     display: block;
     margin: 0 auto;
+    animation: rotateLogo .5s linear 1s;
 }
 
 .space{
@@ -104,6 +105,7 @@ body{
     
 }
 
+
 @keyframes moveInLeft{
     0%{
         opacity: 0;
@@ -138,3 +140,14 @@ body{
     }
 }
 
+@keyframes rotateLogo{
+    0%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

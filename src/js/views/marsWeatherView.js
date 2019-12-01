@@ -30,7 +30,7 @@ export const renderMarsWeather=(obj)=>{
 
     //the solnames to an array
     const daysArr=Object.keys(obj).slice(7,8).map((el)=>{ return obj[el]});
-    console.log(daysArr);
+    // console.log(daysArr);
 
     //destructure the daysArr is an array inside an array
     const [daysArrConv]=daysArr;
@@ -38,7 +38,7 @@ export const renderMarsWeather=(obj)=>{
     //add the soldays to the solValues array
     addSolDay(solValues,daysArrConv);
 
-    console.log(solValues);
+    // console.log(solValues);
     //loop throught and print them
     solValues.forEach(marsWeaMark);
 }
