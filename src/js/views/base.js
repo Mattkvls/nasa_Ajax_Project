@@ -3,6 +3,7 @@ export const elements={
     //search input document selector 
     pictureOfDay:document.querySelector('.pictureDay'),
     asteroidsClose:document.querySelector('.asteroids'),
-    marsWeather:document.querySelector('.marsWeather')
+    marsWeather:document.querySelector('.marsWeather'),
+    searchResults: document.querySelector('.search-results')
 
 }

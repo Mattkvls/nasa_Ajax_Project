@@ -6,6 +6,7 @@ import Search from './models/SearchNasaLi';
 import * as pictureView from './views/pictureOfDayView';
 import * as asteroidView from './views/asteroidsView';
 import * as mWeather from './views/marsWeatherView';
+import * as searchView from './views/searchView';
 
 import 'bootstrap';
 
@@ -83,8 +84,8 @@ const controlSearchLi= async()=>{
     await state.searchObject.getResults();
 
     //render the results to ui 
-    
-
+    searchView.renderResults(state.searchObject.results);
+    console.log(state);
     //clean the search box for the next search 
 
 
