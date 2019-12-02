@@ -4,9 +4,6 @@ import {elements} from './base';
 
 //write a function that receives the result and render it to the user interface 
 export const renderImage=(imageObj)=>{
-
-    console.log(imageObj.media_type);
-
     let markup;
     if(imageObj.media_type==='image'){
         markup=`
@@ -24,6 +21,8 @@ export const renderImage=(imageObj)=>{
         elements.pictureOfDay.insertAdjacentHTML('beforeend',markup);
         console.log(markup);
     }else{
+
+        //markup for the video in case we have a video for the picture of the day 
         markup=`
         <iframe width="560" height="315" src="${imageObj.url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         `

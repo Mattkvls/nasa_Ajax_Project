@@ -89,9 +89,11 @@ const controlSearchLi= async()=>{
     //get the data 
     await state.searchObject.getResults();
 
-    console.log(state.searchObject.results[0].data[0]);
-    console.log(state.searchObject.results[1].data[0]);
-    console.log(state.searchObject.results[2].data[0]);
+    
+    //πρεπει να εχει το index μπροστα 
+    // console.log(state.searchObject.results[0].data[0]);
+    // console.log(state.searchObject.results[1].data[0]);
+    // console.log(state.searchObject.results[2].data[0]);
 
     //render the results to ui 
     searchView.renderResults(state.searchObject.results);
