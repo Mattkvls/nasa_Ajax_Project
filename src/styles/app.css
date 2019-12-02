@@ -106,6 +106,12 @@ body{
     
 }
 
+.marsWeather{
+    background-image: url("../../dist/img/nasa-E7q00J_8N7A-unsplash.jpg");
+    background-size: cover;
+    background-position:top;
+    color: white;
+}
 
 @keyframes moveInLeft{
     0%{
