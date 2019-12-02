@@ -10,7 +10,7 @@ body{
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color:white;
+    color:black;
 }
 
 /* add a white frame to entire body  */
@@ -30,6 +30,7 @@ body{
     background-size: cover;
     background-position:top;
     position: relative;
+    color:white;
     /* clip-path: polygon(0 40vh, 100% 0, 100% 100%, 0 100%); */
     /* -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); */
 }

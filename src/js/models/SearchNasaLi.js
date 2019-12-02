@@ -12,14 +12,8 @@ export default class Search{
     async getResults(){
         try{
             const data=await axios(`https://images-api.nasa.gov/search?&q=${this.query}`);
-            // console.log(data.data.collection.items);
-            // //αυτο ειναι ενα array απο objects για το καθε object -> θελουμε το data , links 
-            // console.log(data.data.collection.items[0].data[0].title);
-            // console.log(data.data.collection.items[0].data[0].photographer);
-            // console.log(data.data.collection.items[0].data[0].description);
-            // console.log(data.data.collection.items[0].data[0].location);
-            // console.log(data.data.collection.items[0].links[0].href);
             this.results=data.data.collection.items;
+            console.log(`this is the data from the server for the query ${this.results}`);
         }catch(error){
             console.log(error);
         }
