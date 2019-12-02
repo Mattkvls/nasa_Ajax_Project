@@ -4,6 +4,8 @@ export const elements={
     pictureOfDay:document.querySelector('.pictureDay'),
     asteroidsClose:document.querySelector('.asteroids'),
     marsWeather:document.querySelector('.marsWeather'),
-    searchResults: document.querySelector('.search-results')
+    searchInput:document.querySelector('.searchInput'),
+    searchForm:document.querySelector('.searchForm'),
+    searchResults: document.querySelector('.searchResults')
 
 }

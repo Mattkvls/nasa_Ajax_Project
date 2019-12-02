@@ -9,6 +9,7 @@ import * as mWeather from './views/marsWeatherView';
 import * as searchView from './views/searchView';
 
 import 'bootstrap';
+import { elements } from './views/base';
 
 
 
@@ -77,27 +78,35 @@ controlMarsWeather();
 
 
 const controlSearchLi= async()=>{
+
+    //get the query from the form 
+   const query=searchView.getInput();
+   if(query){
+
     //create the new search object 
-    state.searchObject=new Search('apolo');
+    state.searchObject=new Search(query);
 
     //get the data 
     await state.searchObject.getResults();
 
+    console.log(state.searchObject.results[0].data[0]);
+    console.log(state.searchObject.results[1].data[0]);
+    console.log(state.searchObject.results[2].data[0]);
+
     //render the results to ui 
     searchView.renderResults(state.searchObject.results);
-    console.log(state);
-    //clean the search box for the next search 
-
-
-
-
+  
+   
 
 /*
-    * get the input from ui 
-    * get the data for the query from the nasa api 
-    * display the data to ui 
     * clean the form for the next search 
     * clean the ui when event click at the search box 
     * */
+   }
 }
-controlSearchLi();
+
+
+elements.searchForm.addEventListener('submit',e=>{
+    e.preventDefault();
+    controlSearchLi();
+})

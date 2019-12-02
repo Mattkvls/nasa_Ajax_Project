@@ -13,7 +13,8 @@ export default class Picture{
         //api_key=CbSMLxCRncwtSTBVz87TluM0lnbX9Sd9tQY3ja5U
         //save the data to the object as result
         this.result=res.data;
-        // console.log(res.data);
+        
+        console.log(res.data);
 
         }catch(error){
             console.log(error);
