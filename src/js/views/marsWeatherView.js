@@ -15,10 +15,10 @@ const addSolDay=(arr,arr2)=>{
 
 const marsWeaMark=(element)=>{
     const markup=`
-<li>
+<li class="marsDays">
     <h4>${element.solName} sol_date</h4>
-    <p>The average temperature is: ${element.AT.av } °F </p>
-    <p>The average Pressure is: ${element.PRE.av} Pa </p>
+    <p>avg Temp : ${Math.round((5/9) * ((element.AT.av) - 32) *100)/100} °C </p>
+    <p>avg Pres : ${element.PRE.av} Pa </p>
 </li>`;
 
 elements.marsWeather.insertAdjacentHTML("beforeend",markup);

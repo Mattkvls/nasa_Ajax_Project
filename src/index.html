@@ -8,58 +8,63 @@
     <title>The Space you need</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo-box">
-            <img src="./img/1200px-NASA_logo.svg.png" class="logo" alt="nasa-logo">
-        </div>
+    <div class="container">
 
-        <div class="text-box">
-            <h1 class="heading-primary">
-                <span class="heading-primary-main">
-                    NASA
-                </span>
-                <span class="heading-primary-sec">
-                    the <span class="space">space </span> you need in your life
-                </span>
-            </h1>
-        </div>
-    </header>
+        <header class="header">
+            <div class="logo-box">
+                <img src="./img/1200px-NASA_logo.svg.png" class="logo" alt="nasa-logo">
+            </div>
 
+            <div class="text-box">
+                <h1 class="heading-primary">
+                    <span class="heading-primary-main">
+                        NASA
+                    </span>
+                    <span class="heading-primary-sec">
+                        the <span class="space">space </span> you need in your life
+                    </span>
+                </h1>
+            </div>
+        </header>
 
-    <div class="imageDay-container">
         <div class='pictureDay'>
-
+            <!-- here will be rendered the image or the video -->
         </div>
 
-    </div>
-    
-    <div>
-        <ul class='marsWeather'>
+        <div class="mars-container">
+            <ul class='marsWeather'>
+                    <!-- here will be rendered the 7 days of the mars weather -->
+            </ul>
             
-        </ul>
-    </div>
-    
-    <div>
-        <ul class='asteroids'>
-        
-        </ul>
-    </div>
-        
-    <div class="nasaLibrary">
-        <form action="" method="" class="searchForm">
-            <input type="text" class="searchInput" placeholder="Search to Nasa's Library">
-            <button class="search-button">Search</button>
-        </form>
-    </div>
-
-    <div>
-        <ul class="searchResults">
-        
-        </ul>
-    </div>
-    <div class="copyright">
-            &copy; by Matt Katsivelis. Powered by
-            <a href="https://www.nasa.gov/" target="_blank" class="link">Nasa's free APIs</a>.
         </div>
+        <din class="clearfix">
+        </din>
+
+        <div class="asteroids-container">
+            <ul class='asteroids'>
+                    <!-- here will be rendered the asteroids close to the earth for today -->
+            </ul>
+        </div>
+
+        <div class="clearfix">
+        </div>
+
+        <div class="nasaLibrary">
+            <form action="" method="" class="searchForm">
+                <input type="text" class="searchInput" placeholder="Search to Nasa's Library">
+                <button class="search-button">Search</button>
+            </form>
+        </div>
+
+        <div>
+            <ul class="searchResults">
+            
+            </ul>
+        </div>
+        <div class="copyright">
+                &copy; by Matt Katsivelis. Powered by
+                <a href="https://www.nasa.gov/" target="_blank" class="link">Nasa's free APIs</a>.
+            </div>
+    </div>
 </body>
 </html>

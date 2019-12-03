@@ -66,7 +66,7 @@ body{
     text-align: center;
 }
 
-* styling the h1 title in different parts */
+/* styling the h1 title in different parts */
 .heading-primary{
     color: #ffffff;
     text-transform: uppercase;
@@ -105,14 +105,39 @@ body{
     animation: moveInright 1.2s ease-out;
     
 }
-
-.marsWeather{
-    background-image: url("../../dist/img/nasa-E7q00J_8N7A-unsplash.jpg");
-    background-size: cover;
-    background-position:top;
-    color: white;
+.mars-container{
+    background-image: url("../../dist/img/nasa-E7q00J_8N7A-unsplash.jpg") repeat 0 0;
+}
+.marsDays{
+    width: 12%;
+    float: left;
+    margin:1%;
+    border: 2px solid black;
+    list-style-type: none;
 }
 
+
+.asteroids-container{
+    border: 1px black;
+}
+
+.asteroid-item{
+    width:20%;
+    margin: 1%;
+    float: left;
+    list-style-type: none;
+    border: 2px solid black;
+}
+
+
+.clearfix:after{
+    content:"";
+    display: table;
+    clear: both;
+}
+.copyright{
+    float: right;
+}
 @keyframes moveInLeft{
     0%{
         opacity: 0;
